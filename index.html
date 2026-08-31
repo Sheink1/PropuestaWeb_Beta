@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colegio Dolores Almada · Informativa</title>
-  <!-- Font Awesome (íconos) -->
+  
+  <!-- ===== FONTS E ICONOS ===== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- ===== ESTILOS CSS ===== -->
   <style>
+    /* ============================================
+       RESET Y CONFIGURACIÓN GLOBAL
+       ============================================ */
     * {
       margin: 0;
       padding: 0;
@@ -20,20 +26,24 @@
       line-height: 1.5;
     }
 
-    /* contenedor principal */
+    /* ============================================
+       CONTENEDOR PRINCIPAL
+       ============================================ */
     .wrapper {
       max-width: 1280px;
       margin: 0 auto;
       padding: 1.5rem 2rem;
     }
 
-    /* ----- HEADER / NAV (similar a referencia) ----- */
+    /* ============================================
+       HEADER / NAVEGACIÓN
+       ============================================ */
     .top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
       border-bottom: 2px solid #d8cfc0;
       margin-bottom: 2rem;
     }
@@ -41,7 +51,7 @@
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .logo-icon {
@@ -55,8 +65,6 @@
       justify-content: center;
       font-size: 1.8rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-
-      
     }
 
     .logo-text {
@@ -95,7 +103,7 @@
       font-size: 0.9rem;
     }
 
-    /* hamburguesa (mobile) */
+    /* Menú hamburguesa (mobile) */
     .menu-toggle {
       display: none;
       font-size: 1.6rem;
@@ -105,120 +113,219 @@
       border: none;
     }
 
-    /* hero / banner */
-/* Hero principal con tus colores */
-.hero {
-  background: linear-gradient(145deg, #1b8eec, #fff9f0);
-  border-radius: 32px;
-  padding: 2.5rem 3rem;
-  margin-bottom: 2.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-}
+    /* ============================================
+       HERO / BANNER PRINCIPAL
+       ============================================ */
+    .hero {
+      background: linear-gradient(145deg, #1b8eec, #fff9f0);
+      border-radius: 32px;
+      padding: 2.5rem 3rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    }
 
-/* Texto del hero */
-.hero-text {
-  flex: 1 1 300px;
-  min-width: 250px;
-}
+    .hero-text {
+      flex: 1 1 300px;
+      min-width: 250px;
+    }
 
-.hero-text h1 {
-  font-size: clamp(2rem, 4vw, 2.6rem);
-  font-weight: 700;
-  color: #000000;
-  line-height: 1.2;
-}
+    .hero-text h1 {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: #000000;
+      line-height: 1.2;
+    }
 
-.hero-text h1 i {
-  color: #f6f6f8;
-  margin-right: 12px;
-}
+    .hero-text h1 i {
+      color: #f6f6f8;
+      margin-right: 12px;
+    }
 
-.hero-text p {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
-  color: #2d3e4f;
-  margin-top: 0.8rem;
-  line-height: 1.6;
-  max-width: 600px;
-}
+    .hero-text p {
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      color: #2d3e4f;
+      margin-top: 0.8rem;
+      line-height: 1.6;
+      max-width: 600px;
+    }
 
-/* Badges (etiquetas) */
-.hero-badge {
-  background: #9b6b43;
-  color: #fef7ed;
-  padding: 0.7rem 2rem;
-  border-radius: 60px;
-  font-weight: 600;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-  box-shadow: 0 4px 10px rgba(155, 107, 67, 0.2);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;
-}
+    .hero-image {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(120px, 25vw, 350px);
+      height: clamp(120px, 25vw, 350px);
+    }
 
-.hero-badges {
-  margin-top: 1.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-/* Contenedor de la imagen - RESPONSIVE */
-.hero-image {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(120px, 25vw, 350px);
-  height: clamp(120px, 25vw, 350px);
-}
+    /* ============================================
+       CARRUSEL / SLIDER
+       ============================================ */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      background: #d6cbbc;
+    }
 
-.hero-image img {
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .slide-link {
+      min-width: 100%;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .slide {
+      height: 350px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem 3rem;
+      color: white;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+      z-index: 2;
+      background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 60%);
+    }
+
+    .slide-content h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.3px;
+    }
+
+    .slide-content p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* Estilos para videos en el carrusel */
+.video-slide video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  max-width: 100%;
-  max-height: 100%;
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem;
-    gap: 1.5rem;
-  }
-  
-  .hero-image {
-    width: clamp(150px, 30vw, 250px);
-    height: clamp(150px, 30vw, 250px);
-    align-self: center;
-  }
-  
-  .hero-badge {
-    white-space: normal;
-  }
+/* Si quieres que el video ocupe todo sin el overlay de texto */
+.video-slide {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 480px) {
-  .hero {
-    padding: 1.2rem;
-  }
-  
-  .hero-image {
-    width: clamp(120px, 35vw, 200px);
-    height: clamp(120px, 35vw, 200px);
-  }
+.video-slide .slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 3rem;
+  color: white;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  z-index: 2;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 60%);
 }
 
-    /* grid informativa (similar a referencia) */
+    /* Botones del carrusel */
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      color: #2d3e4f;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slider-btn:hover {
+      background: #9b6b43;
+      color: white;
+    }
+
+    .slider-btn.prev {
+      left: 16px;
+    }
+    .slider-btn.next {
+      right: 16px;
+    }
+
+    /* Puntos indicadores */
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 1rem 0 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #d8cfc0;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      padding: 0;
+    }
+
+    .dot.active {
+      background: #9b6b43;
+      transform: scale(1.2);
+      box-shadow: 0 0 0 3px rgba(155, 107, 67, 0.2);
+    }
+
+    /* ============================================
+       GRID INFORMATIVA
+       ============================================ */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -227,8 +334,6 @@
     }
 
     .info-card {
-      background: #af2d2dd9;
-      backdrop-filter: blur(2px);
       background: #72c7ff;
       padding: 1.8rem 1.5rem;
       border-radius: 28px;
@@ -245,7 +350,7 @@
 
     .info-card i {
       font-size: 2.2rem;
-      color: hsl(249, 50%, 48%);
+      color: #3f2c8f;
       margin-bottom: 0.8rem;
       display: inline-block;
     }
@@ -270,7 +375,9 @@
       font-size: 0.9rem;
     }
 
-    /* sección destacada (como "noticias" o "sobre") */
+    /* ============================================
+       SECCIÓN DESTACADA
+       ============================================ */
     .feature-section {
       display: flex;
       flex-wrap: wrap;
@@ -328,7 +435,9 @@
       font-size: 1.3rem;
     }
 
-    /* footer */
+    /* ============================================
+       FOOTER / PIE DE PÁGINA
+       ============================================ */
     .footer {
       margin-top: 2.5rem;
       border-top: 2px solid #70d4cf;
@@ -357,593 +466,402 @@
       color: #8f4e19;
     }
 
-    /* Responsive */
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
     @media (max-width: 820px) {
       .wrapper { padding: 1rem; }
-      .hero { flex-direction: column; align-items: start; gap: 1.5rem; padding: 2rem; }
-      .hero h1 { font-size: 2rem; }
-      .nav-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 0.5rem 0; }
-      .nav-links.open { display: flex; }
+      
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+      
+      .hero-image {
+        width: clamp(150px, 30vw, 250px);
+        height: clamp(150px, 30vw, 250px);
+        align-self: center;
+      }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+      }
+      .nav-links.open {
+        display: flex;
+        align-items: end;
+      }
+      
       .menu-toggle { display: block; }
       .top-bar { flex-wrap: wrap; }
-      .feature-section { flex-direction: column; align-items: start; padding: 2rem; }
-      .feature-stats { width: 100%; justify-content: flex-start; }
+      
+      .feature-section {
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+      }
+      .feature-stats {
+        width: 100%;
+        justify-content: flex-start;
+      }
       .footer { flex-direction: column; }
+      
+      .slide { height: 250px; }
+      .slide-content { padding: 1.5rem; }
+      .slide-content h2 { font-size: 1.5rem; }
+      .slide-content p { font-size: 0.95rem; }
+      .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
     }
 
     @media (max-width: 500px) {
+      .hero { padding: 1.2rem; }
       .hero h1 { font-size: 1.8rem; }
+      .hero-image {
+        width: clamp(120px, 35vw, 200px);
+        height: clamp(120px, 35vw, 200px);
+      }
       .logo-text { font-size: 1.4rem; }
-    }
-
-  .slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    background: #d6cbbc;
-  }
-
-  .slider-track {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .slide {
-    min-width: 100%;
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .slide-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 3rem;
-    color: white;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-    z-index: 2;
-    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 60%);
-  }
-
-  .slide-content h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    letter-spacing: -0.3px;
-  }
-
-  .slide-content p {
-    font-size: 1.1rem;
-    opacity: 0.95;
-  }
-
-  /* Botones */
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(4px);
-    border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 1.4rem;
-    color: #2d3e4f;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .slider-btn:hover {
-    background: #9b6b43;
-    color: white;
-  }
-
-  .slider-btn.prev {
-    left: 16px;
-  }
-  .slider-btn.next {
-    right: 16px;
-  }
-
-  /* Puntos indicadores */
-  .dots-container {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 1rem 0 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #d8cfc0;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
-    padding: 0;
-  }
-
-  .dot.active {
-    background: #9b6b43;
-    transform: scale(1.2);
-    box-shadow: 0 0 0 3px rgba(155, 107, 67, 0.2);
-  }
-
-
-
-  
-
-.slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    background: #d6cbbc;
-  }
-
-  .slider-track {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .slide-link {
-    min-width: 100%;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .slide {
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .slide-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 3rem;
-    color: white;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-    z-index: 2;
-    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 60%);
-  }
-
-  .slide-content h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    letter-spacing: -0.3px;
-  }
-
-  .slide-content p {
-    font-size: 1.1rem;
-    opacity: 0.95;
-  }
-
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(4px);
-    border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 1.4rem;
-    color: #2d3e4f;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .slider-btn:hover {
-    background: #9b6b43;
-    color: white;
-  }
-
-  .slider-btn.prev {
-    left: 16px;
-  }
-  .slider-btn.next {
-    right: 16px;
-  }
-
-  .dots-container {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 1rem 0 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #d8cfc0;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
-    padding: 0;
-  }
-
-  .dot.active {
-    background: #9b6b43;
-    transform: scale(1.2);
-    box-shadow: 0 0 0 3px rgba(155, 107, 67, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    .slide {
-      height: 250px;
-    }
-    .slide-content {
-      padding: 1.5rem;
-    }
-    .slide-content h2 {
-      font-size: 1.5rem;
-    }
-    .slide-content p {
-      font-size: 0.95rem;
-    }
-    .slider-btn {
-      width: 36px;
-      height: 36px;
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .slide {
-      height: 200px;
-    }
-    .slide-content {
-      padding: 1rem;
-    }
-    .slide-content h2 {
-      font-size: 1.2rem;
-    }
-    .slide-content p {
-      font-size: 0.85rem;
-    }
-  }
-
-
-
-  </style>
-</head>
-<body>
-<div class="wrapper">
-
-  <!-- header -->
-  <header class="top-bar">
-    <div class="logo-area">
-      <div class="logo-icon"> <img src="imagenes/Escudo_CDA_HD.png" alt="Escudo_CDA_HD"   style="width: 70px; height: 70px; border-radius: 60%;"> </i></div>
-      <div class="logo-text">Colegio Dolores Almada</div>
-    </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="menú"><i class="fas fa-bars"></i></button>
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-      <a href="#"><i class="fas fa-school"></i> Nosotros</a>
-      <a href="#"><i class="fas fa-calendar-alt"></i> Calendario</a>
-      <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
-    </nav>
-  </header>
-
-  <!-- hero / presentación -->
-  <section class="hero">
-  <div class="hero-text">
-    <h1>Dolores S. De Almada <br>Educación con raíces</h1>
-    <p>Nuestra historia comenzó en 1956. El colegio nació para responder 
-      a la necesidad de las familias de Navolato de contar con una opción educativa que uniera la disciplina, la academia y la fe.<br>
-      El Colegio Dolores S. de Almada es una institución educativa privada con un profundo arraigo en el corazón de Navolato, Sinaloa.
-      Desde nuestra fundación, nos hemos dedicado a ofrecer una educación integral de excelencia,
-      combinando el desarrollo académico con una sólida formación en valores humanos y cristianos.</p>
-  </div>
-  
-  <div class="hero-image">
-    <img src="imagenes/Escudo_CDA_HD.png" alt="Escudo del Colegio Dolores Almada">
-  </div>
-</section>
-
       
+      .slide { height: 200px; }
+      .slide-content { padding: 1rem; }
+      .slide-content h2 { font-size: 1.2rem; }
+      .slide-content p { font-size: 0.85rem; }
+    }
+  </style>
 
-      <!--   ICONOS AL LADO DEL BANNER INICIAL                     
-      <i class="fas fa-book-open" style="font-size: 3.2rem; color: #0e1eff; opacity: 0.6;"></i>
-      <i class="fas fa-chalkboard-teacher" style="font-size: 3.2rem; color: #0e1eff; opacity: 0.5;"></i>
-      -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ==========================================
+    HEADER / NAVEGACIÓN
+    ========================================== -->
+    <header class="top-bar">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <img src="imagenes/Escudo_CDA_HD.png" alt="Escudo_CDA_HD" style="width: 70px; height: 70px; border-radius: 60%;">
+        </div>
+        <div class="logo-text">Colegio Dolores Almada</div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="menú"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="inscripciones_y_horarios.html"><i class="fas fa-school"></i> Horarios e inscripciones</a>
+        <a href="eventos_y_avisos.html"><i class="fas fa-calendar-alt"></i> Avisos y calendario</a>
+        <a href="reglamento_escolar.html"><i class="fas fa-bible"></i> Reglamento</a>
+        <a href="#Contactos"><i class="fas fa-envelope"></i> Contacto</a>
+      </nav>
+    </header>
+
+    <!-- ==========================================
+    HERO / PRESENTACIÓN
+    ========================================== -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Dolores S. De Almada <br>Educación con raíces</h1>
+        <p>Nuestra historia comenzó en 1956. El colegio nació para responder 
+          a la necesidad de las familias de Navolato de contar con una opción educativa que uniera la disciplina, la academia y la fe.<br>
+          El Colegio Dolores S. de Almada es una institución educativa privada con un profundo arraigo en el corazón de Navolato, Sinaloa.
+          Desde nuestra fundación, nos hemos dedicado a ofrecer una educación integral de excelencia,
+          combinando el desarrollo académico con una sólida formación en valores humanos y cristianos.</p>
+      </div>
+      <div class="hero-image">
+        <img src="imagenes/Escudo_CDA_HD.png" alt="Escudo del Colegio Dolores Almada">
+      </div>
+    </section>
+
+    <!-- ==========================================
+    CARRUSEL DE IMÁGENES CON ENLACES
+    ========================================== -->
+    <div class="slider-container" id="sliderContainer">
+      <div class="slider-track" id="sliderTrack">
+        
+        <!-- Diapositiva 1 - Calendario -->
+        <a href="eventos_y_avisos.html" class="slide-link">
+          <div class="slide">
+            <img src="imagenes/arte.jpg" alt="Eventos">
+            <div class="slide-content">
+              <h2>📅 Calendario de eventos</h2>
+              <p>Consulta todas nuestras actividades</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Diapositiva 2 - Nosotros -->
+        <a href="Nosotros.html" class="slide-link">
+          <div class="slide">
+            <img src="imagenes/Soy CDA.jpg" alt="Nosotros">
+            <div class="slide-content">
+              <h2>📚 Soy CDA</h2>
+              <p>Conoce mas sobre el Colegio</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Diapositiva 3 - Deportes -->
+        <a href="Deportes.html" class="slide-link">
+          <div class="slide">
+            <img src="imagenes/deportes.jpg" alt="Deportes">
+            <div class="slide-content">
+              <h2>⚽ Eventos deportivos</h2>
+              <p>Domingo deportivo familiar cda</p>
+            </div>
+          </div>
+        </a>
+
+
+        <!-- Diapositiva 4 con video  -->
+<a href="#contacto" class="slide-link">
+  <div class="slide video-slide">
+    <video autoplay muted loop playsinline>
+      <source src="Videos/VID_2.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+    <div class="slide-content">
+      <h2>📞Agenda tu visita para conocer a la familia CDA</h2>
+      <p>Te invitamos a conocer nuestras instalaciones!</p>
     </div>
-  </section>
+  </div>
+</a>
 
-
-
-
-
-<!-- ===== CARRUSEL CON ENLACES - UNA LÍNEA MODIFICADA ===== -->
-<div class="slider-container" id="sliderContainer">
-  <div class="slider-track" id="sliderTrack">
-    
-    <!-- Diapositiva 1 - Enlace a Calendario.html -->
-    <a href="Calendario.html" class="slide-link">
-      <div class="slide">
-        <img src="imagenes/arte.jpg" alt="Eventos">
-        <div class="slide-content">
-          <h2>📅 Calendario de eventos</h2>
-          <p>Consulta todas nuestras actividades</p>
-        </div>
       </div>
-    </a>
 
-    <!-- Diapositiva 2 - Enlace a Biblioteca.html -->
-    <a href="Nosotros.html" class="slide-link">
-      <div class="slide">
-        <img src="imagenes/Soy CDA.jpg" alt="Nosotros">
-        <div class="slide-content">
-          <h2>📚 Soy CDA</h2>
-          <p>Conoce mas sobre el Colegio</p>
-        </div>
+      <!-- Botones de navegación del carrusel -->
+      <button class="slider-btn prev" id="prevBtn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-btn next" id="nextBtn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Indicadores (puntos) del carrusel -->
+    <div class="dots-container" id="dotsContainer"></div>
+
+    <!-- ==========================================
+    GRID INFORMATIVA
+    ========================================== -->
+    <section class="info-grid">
+      <div class="info-card">
+        <i class="fas fa-bible"></i>
+        <h3>Crecimiento en la Fe</h3>
+        <p>Integramos un programa de educacion en la fé que cultiva la espiritualidad y valores eucaristicos desde pequeños.</p>
+        <span class="small-meta"><i class="fas fa-cross"></i> SJS</span>
       </div>
-    </a>
-
-    <!-- Diapositiva 3 - Enlace a Deportes.html -->
-    <a href="Deportes.html" class="slide-link">
-      <div class="slide">
-        <img src="imagenes/deportes.jpg" alt="Deportes">
-        <div class="slide-content">
-          <h2>⚽ Eventos deportivos</h2>
-          <p>Domingo deportivo familiar cda</p>
-        </div>
+      <div class="info-card">
+        <i class="fas fa-futbol"></i>
+        <h3>Deportes & arte</h3>
+        <p>Fútbol, vóley, básquet, danza, y musica etc. Participación en actividades escolares.</p>
+        <span class="small-meta"><i class="fas fa-trophy"></i> +10 disciplinas</span>
       </div>
-    </a>
-
-    <!-- Diapositiva 4 - Enlace a sección con ancla -->
-    <a href="#contacto" class="slide-link">
-      <div class="slide">
-        <img src="imagenes/contacto.jpg" alt="Contacto">
-        <div class="slide-content">
-          <h2>📞 Contáctanos</h2>
-          <p>Estamos para ayudarte</p>
-        </div>
+      <div class="info-card">
+        <i class="fas fa-laptop"></i>
+        <h3>Innovación</h3>
+        <p>Aulas digitales, robótica y laboratorio de ciencias. Clases de Tecnologia con pensamiento computacional desde 1° grado.</p>
+        <span class="small-meta"><i class="fas fa-microchip"></i> Herramietas Digitales</span>
       </div>
-    </a>
+    </section>
 
+    <!-- ==========================================
+    SECCIÓN DESTACADA / PROYECTO EDUCATIVO
+    ========================================== -->
+    <section class="feature-section">
+      <div class="feature-text">
+        <h2><i class="fas fa-hand-holding-heart" style="color: #5923ee; margin-right: 10px;"></i> Proyecto educativo</h2>
+        <p>En el Colegio Dolores Almada promovemos el pensamiento crítico, la solidaridad, el respeto por la diversidad y la Fé. Nuestro equipo docente acompaña a cada estudiante en su desarrollo integral.</p>
+        <p style="margin-top: 0.8rem; font-size: 1rem; opacity: 0.8;"><i class="fas fa-check-circle" style="color: #1a18b9;"></i> Acreditación oficial · Nivel Primaria y Secundaria.</p>
+      </div>
+      <div class="feature-stats">
+        <div class="stat-item"><i class="fas fa-users"></i> <span>98%</span> egresados</div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+    FOOTER / PIE DE PÁGINA
+    ========================================== -->
+    <footer class="footer" id="Contactos">
+      <div class="footer-col">
+        <p><i class="fas fa-map-pin"></i> Niños Heroes, Primer Cuadro, 80370 Navolato, Sin.</p>
+        <p><i class="fas fa-phone-alt"></i> (672) 727 0152</p>
+        <p><i class="fas fa-envelope"></i> colegiodoloresoficial@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <p><i class="far fa-clock"></i> Lun a Vie 7:00am – 2:30pm</p>
+        <p><i class="fas fa-globe"></i> www.CDA-Navolato.com</p>
+      </div>
+      <div class="footer-col footer-social">
+        <a href="https://www.facebook.com/colegiodoloresalmadaoficial/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/colegiodoloresalmada/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+
+    <!-- Aviso informativo -->
+    <div style="margin-top: 1rem; font-size: 0.8rem; text-align: center; color: #000000; opacity: 0.7; border-top: 1px solid #ddd2c4; padding-top: 1.2rem;">
+      <i class="fas fa-info-circle"></i> Página informativa. Autor Franco Lopez C. · Colegio Dolores Almada (2026)
+    </div>
   </div>
 
-  <!-- Botones de navegación -->
-  <button class="slider-btn prev" id="prevBtn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-  <button class="slider-btn next" id="nextBtn" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
-</div>
 
-<!-- Indicadores (puntos) -->
-<div class="dots-container" id="dotsContainer"></div>
-<!-- ===== JAVASCRIPT DEL CARRUSEL ===== -->
-<script>
-  (function() {
-    const track = document.getElementById('sliderTrack');
-    // 🔥 UNICA LÍNEA MODIFICADA - ahora busca '.slide-link' en lugar de '.slide'
-    const slides = track.querySelectorAll('.slide-link');
-    const totalSlides = slides.length;
-    let currentIndex = 0;
-    let autoPlayInterval = null;
-    const AUTO_INTERVAL = 4000;
 
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsContainer = document.getElementById('dotsContainer');
 
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('button');
-      dot.classList.add('dot');
-      if (i === 0) dot.classList.add('active');
-      dot.setAttribute('data-index', i);
-      dot.addEventListener('click', function() {
-        goToSlide(parseInt(this.getAttribute('data-index')));
-        resetAutoPlay();
-      });
-      dotsContainer.appendChild(dot);
-    }
-    const dots = dotsContainer.querySelectorAll('.dot');
 
-    function goToSlide(index) {
-      if (index < 0) index = totalSlides - 1;
-      if (index >= totalSlides) index = 0;
-      currentIndex = index;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-      });
-    }
 
-    function nextSlide() {
-      goToSlide(currentIndex + 1);
-    }
 
-    function prevSlide() {
-      goToSlide(currentIndex - 1);
-    }
 
-    function resetAutoPlay() {
-      if (autoPlayInterval) {
-        clearInterval(autoPlayInterval);
-        autoPlayInterval = null;
+
+
+
+
+
+
+
+
+
+
+  <!-- ==========================================
+  JAVASCRIPT
+  ========================================== -->
+
+  <!-- ===== CARRUSEL - SLIDER ===== -->
+  <script>
+    (function() {
+      const track = document.getElementById('sliderTrack');
+      const slides = track.querySelectorAll('.slide-link');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+      let autoPlayInterval = null;
+      const AUTO_INTERVAL = 4000;
+
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsContainer = document.getElementById('dotsContainer');
+
+      // Crear puntos indicadores
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.setAttribute('data-index', i);
+        dot.addEventListener('click', function() {
+          goToSlide(parseInt(this.getAttribute('data-index')));
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
       }
-      autoPlayInterval = setInterval(nextSlide, AUTO_INTERVAL);
-    }
+      const dots = dotsContainer.querySelectorAll('.dot');
 
-    prevBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      prevSlide();
-      resetAutoPlay();
-    });
-    nextBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      nextSlide();
-      resetAutoPlay();
-    });
-
-    resetAutoPlay();
-
-    const sliderContainer = document.getElementById('sliderContainer');
-    sliderContainer.addEventListener('mouseenter', function() {
-      if (autoPlayInterval) {
-        clearInterval(autoPlayInterval);
-        autoPlayInterval = null;
+      // Ir a una diapositiva específica
+      function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
       }
-    });
-    sliderContainer.addEventListener('mouseleave', function() {
-      if (!autoPlayInterval) {
+
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
+
+      // Reiniciar reproducción automática
+      function resetAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = null;
+        }
         autoPlayInterval = setInterval(nextSlide, AUTO_INTERVAL);
       }
-    });
-  })();
-</script>
 
-
-
-
-
-
-  
-  <!-- grid informativa (similar a la referencia) -->
-  <section class="info-grid">
-   
-
-   
-    <div class="info-card">
-      <i class="fas fa-bible"></i>
-      <h3>Crecimiento en la Fe</h3>
-      <p>Integramos un programa de educacion en la fé que cultiva la espiritualidad y valores eucaristicos desde pequeños.</p>
-      <span class="small-meta"><i class="fas fa-cross"></i> SJS</span>
-    </div>
-    <div class="info-card">
-      <i class="fas fa-futbol"></i>
-      <h3>Deportes & arte</h3>
-      <p>Fútbol, vóley, básquet, danza,  y  musica etc. Participación en actividades escolares.</p>
-      <span class="small-meta"><i class="fas fa-trophy"></i> +10 disciplinas</span>
-    </div>
-    <div class="info-card">
-      <i class="fas fa-laptop"></i>
-      <h3>Innovación</h3>
-      <p>Aulas digitales, robótica y laboratorio de ciencias. Clases de Tecnologia con pensamiento computacional desde 1° grado.</p>
-      <span class="small-meta"><i class="fas fa-microchip"></i> Herramietas Digitales</span>
-    </div>
-
-    
-
-
-
-  </section>
-
-  <!-- sección destacada (similar a "noticias/valores") -->
-  <section class="feature-section">
-    <div class="feature-text">
-      <h2><i class="fas fa-hand-holding-heart" style="color: #5923ee; margin-right: 10px;"></i> Proyecto educativo</h2>
-      <p>En el Colegio Dolores Almada promovemos el pensamiento crítico, la solidaridad, el respeto por la diversidad y la Fé. Nuestro equipo docente acompaña a cada estudiante en su desarrollo integral.</p>
-      <p style="margin-top: 0.8rem; font-size: 1rem; opacity: 0.8;"><i class="fas fa-check-circle" style="color: #1a18b9;"></i> Acreditación oficial · Nivel Primaria  y Secundaria.</p>
-    </div>
-    <div class="feature-stats">
-        
-      <div class="stat-item"><i class="fas fa-users"></i> <span>98%</span> egresados</div>
-      <!--                                                                      
-      <div class="stat-item"><i class="fas fa-star"></i> <span>4.7</span> valoración</div> 
-      -->
-    </div>
-  </section>
-
-  <!-- footer -->
-  <footer class="footer">
-    <div class="footer-col">
-      <p><i class="fas fa-map-pin"></i> Niños Heroes sn, Primer Cuadro, 80370 Navolato, Sin.</p>
-      <p><i class="fas fa-phone-alt"></i> (672) 727 0152</p>
-      <p><i class="fas fa-envelope"></i> colegiodoloresoficial@gmail.com</p>
-    </div>
-    <div class="footer-col">
-      <p><i class="far fa-clock"></i> Lun a Vie 7:00am – 2:30pm </p>
-      <p><i class="fas fa-globe"></i> www.CDA-Navolato.com</p>
-    </div>
-    <div class="footer-col footer-social">
-      <a href="https://www.facebook.com/colegiodoloresalmadaoficial/?locale=es_LA"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/colegiodoloresalmada/"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-  </footer>
-
-  <!-- aviso informativo -->
-  <div style="margin-top: 1rem; font-size: 0.8rem; text-align: center; color: #000000; opacity: 0.7; border-top: 1px solid #ddd2c4; padding-top: 1.2rem;">
-    <i class="fas fa-info-circle"></i> Página informativa hecho por Franco Lopez C. · Colegio Dolores Almada (contenido de prueba)
-  </div>
-</div>
-
-<!-- javascript: toggle mobile menu -->
-<script>
-  (function() {
-    const toggleBtn = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    if (toggleBtn && navLinks) {
-      toggleBtn.addEventListener('click', function(e) {
+      // Eventos de los botones
+      prevBtn.addEventListener('click', function(e) {
         e.stopPropagation();
-        navLinks.classList.toggle('open');
-        // cambia ícono
-        const icon = toggleBtn.querySelector('i');
-        if (navLinks.classList.contains('open')) {
-          icon.className = 'fas fa-times';
-        } else {
-          icon.className = 'fas fa-bars';
+        prevSlide();
+        resetAutoPlay();
+      });
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nextSlide();
+        resetAutoPlay();
+      });
+
+      // Iniciar reproducción automática
+      resetAutoPlay();
+
+      // Pausar al pasar el mouse
+      const sliderContainer = document.getElementById('sliderContainer');
+      sliderContainer.addEventListener('mouseenter', function() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = null;
         }
       });
-
-      // cerrar menú al hacer click en un enlace (opcional)
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
-          navLinks.classList.remove('open');
-          const icon = toggleBtn.querySelector('i');
-          if (icon) icon.className = 'fas fa-bars';
-        });
+      sliderContainer.addEventListener('mouseleave', function() {
+        if (!autoPlayInterval) {
+          autoPlayInterval = setInterval(nextSlide, AUTO_INTERVAL);
+        }
       });
-    }
-  })();
-</script>
+    })();
+  </script>
+
+  <!-- ===== MENÚ MÓVIL - TOGGLE ===== -->
+  <script>
+    (function() {
+      const toggleBtn = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navLinks.classList.toggle('open');
+          const icon = toggleBtn.querySelector('i');
+          if (navLinks.classList.contains('open')) {
+            icon.className = 'fas fa-times';
+          } else {
+            icon.className = 'fas fa-bars';
+          }
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) icon.className = 'fas fa-bars';
+          });
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>
